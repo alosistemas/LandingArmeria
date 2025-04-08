@@ -1,21 +1,22 @@
 ---
-import '/src/styles.css';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+title: "Servicios de Armeria - Template Armeria"
+layout: "../layouts/default.astro"
+
+import '../styles.css';
 ---
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="src/styles.css">
 
     <title>Armería Seguridad - Equipamiento y Asesoría Legal</title>
 </head>
 <body>
     <header>
-        <div class="nav-container">
+        <div class="nav-container" scroll-hidden>
             <div class="logo">Armería<span>Seguridad</span></div>
             <nav>
                 <ul>
@@ -29,11 +30,11 @@ import '/src/styles.css';
         </div>
     </header>
 
-    <div class="legal-banner">
+    <div class="legal-banner" scroll-hidden>
         La compra de armas de fuego en Perú requiere permisos legales de la SUCAMEC. Ofrecemos asesoría en todo el proceso.
     </div>
 
-    <section class="hero">
+    <section class="hero" scroll-hidden>
         <div class="hero-content">
             <h1>Especialistas en Armas de Defensa Personal</h1>
             <p>Somos expertos en equipamiento para defensa y seguridad. Te asesoramos para obtener los permisos necesarios y encontrar el arma adecuada a tus necesidades.</p>
@@ -47,23 +48,23 @@ import '/src/styles.css';
             <h2 class="section-title">Asesoría en <span>Permisos Legales</span></h2>
             <p>Te acompañamos en todo el proceso para obtener tu licencia SUCAMEC y adquirir legalmente tu arma de defensa.</p>
             
-            <div class="permit-steps">
-                <div class="step-card">
-                    <div class="step-number">1</div>
+            <div class="permit-steps parallax">
+                <div class="step-card slide-in-left">
+                    <div class="step-number fade-in-sequence">1</div>
                     <h3>Evaluación Psicológica</h3>
                     <p>Te orientamos con centros médicos autorizados para obtener tu certificado de salud mental.</p>
                 </div>
-                <div class="step-card">
+                <div class="step-card slide-in-left">
                     <div class="step-number">2</div>
                     <h3>Curso de Manejo de Armas</h3>
                     <p>Impartimos cursos certificados por SUCAMEC sobre seguridad y manejo responsable.</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
+                <div class="step-card slide-in-left">
+                    <div class="step-number" >3</div>
                     <h3>Trámites SUCAMEC</h3>
                     <p>Asistencia completa para obtener tu licencia de posesión y uso de armas de fuego.</p>
                 </div>
-                <div class="step-card">
+                <div class="step-card slide-in-left">
                     <div class="step-number">4</div>
                     <h3>Compra Segura</h3>
                     <p>Una vez aprobada tu licencia, te asesoramos en la selección y compra del arma adecuada.</p>
@@ -72,12 +73,12 @@ import '/src/styles.css';
         </div>
     </section>
 
-    <section class="featured-section">
-        <h2 class="section-title">Pistolas <span>Destacadas</span></h2>
-        <div class="products-grid">
+    <section class="featured-section slide-in-left">
+        <h2 class="section-title ">Pistolas <span>Destacadas</span></h2>
+        <div class="products-grid slide-in-left" >
             <div class="product-card">
-                <div class="product-img"><img src="public/imagenes/glock.jpg" alt="Pistola Glock 19 Gen 5" width="200"></div>
-                <div class="product-content">
+                <div class="product-img"><img src={`${import.meta.env.BASE_URL}/imagenes/glock.jpg`} alt="Pistola Glock 19 Gen 5" width="200"></div>
+                <div class="product-content parallax">
                     <h3 class="product-title">Glock 19 Gen 5</h3>
                     <p class="product-desc">Confiabilidad y precisión para defensa personal</p>
                     <p class="product-price">S/. 4,999.00</p>
@@ -85,17 +86,17 @@ import '/src/styles.css';
                 </div>
             </div>
             <div class="product-card">
-                <div class="product-img"><img src="public/imagenes/pistolas-beretta-apx.jpg" alt="Beretta APX" width="200">
+                <div class="product-img"><img src={`${import.meta.env.BASE_URL}/imagenes/pistolas-beretta-apx.jpg`} alt="Beretta APX" width="200">
 				</div>
-                <div class="product-content">
+                <div class="product-content parallax ">
                     <h3 class="product-title">Beretta APX</h3>
                     <p class="product-desc">Diseño ergonómico y fácil manejo</p>
                     <p class="product-price">S/. 5,299.00</p>
                     <div class="permit-badge">Requiere Licencia SUCAMEC</div>
                 </div>
             </div>
-            <div class="product-card">
-                <div class="product-img"><img src="public/imagenes/smith&Wesson.jpg" alt="Smith&Wesson" width="200">
+            <div class="product-card ">
+                <div class="product-img"><img src={`${import.meta.env.BASE_URL}/imagenes/smith&Wesson.jpg`} alt="Smith&Wesson" width="200">
 				</div>
                 <div class="product-content">
                     <h3 class="product-title">Smith & Wesson M&P 9</h3>
@@ -105,7 +106,7 @@ import '/src/styles.css';
                 </div>
             </div>
             <div class="product-card">
-                <div class="product-img"><img src="public/imagenes/czp-10.jpg" alt="CZ P-10" width="200"></div>
+                <div class="product-img"><img src={`${import.meta.env.BASE_URL}/imagenes/czp-10.jpg`} alt="CZ P-10" width="200"></div>
                 <div class="product-content">
                     <h3 class="product-title">CZ P-10 C</h3>
                     <p class="product-desc">Compacta y potente para defensa personal</p>
@@ -116,10 +117,10 @@ import '/src/styles.css';
         </div>
     </section>
 
-    <section class="categories-section">
+    <section class="categories-section ">
         <h2 class="section-title">Nuestras <span>Categorías</span></h2>
-        <div class="categories-grid">
-            <div class="category-card">
+        <div class="categories-grid fade-in-sequence">
+            <div class="category-card ">
                 <h3 class="category-name">Pistolas 9mm</h3>
             </div>
             <div class="category-card">
@@ -140,11 +141,51 @@ import '/src/styles.css';
         </div>
     </section>
 
+    <section class="testimonials-section">
+        <h2 class="section-title">Lo que dicen nuestros <span>clientes</span></h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-in-sequence">
+                <div class="testimonial-photo">
+                    <img src={`${import.meta.env.BASE_URL}/imagenes/JuanPerez.jpg`} alt="Juan Pérez">
+                </div>
+                <p class="testimonial-text">"Excelente servicio y asesoría. Me ayudaron con todo el proceso de permisos."</p>
+                <h3 class="testimonial-author">- Juan Pérez</h3>
+            </div>
+            <div class="testimonial-card fade-in-sequence">
+                <div class="testimonial-photo">
+                    <img src={`${import.meta.env.BASE_URL}/imagenes/Maria.jpg`} alt="María López">
+                </div>
+                <p class="testimonial-text">"Gran variedad de productos y atención personalizada. Muy recomendados."</p>
+                <h3 class="testimonial-author">- María López</h3>
+            </div>
+            <div class="testimonial-card fade-in-sequence">
+                <div class="testimonial-photo">
+                    <img src={`${import.meta.env.BASE_URL}/imagenes/Carlos.jpg`} alt="Carlos García">
+                </div>
+                <p class="testimonial-text">"Profesionales y confiables. Me sentí seguro durante todo el proceso."</p>
+                <h3 class="testimonial-author">- Carlos García</h3>
+            </div>
+        </div>
+    </section>
+
     <section class="cta-section">
         <div class="cta-content">
             <h2>¿Necesitas asesoría personalizada?</h2>
             <p>Nuestro equipo de expertos está listo para guiarte en todo el proceso, desde la obtención de permisos hasta la selección del arma ideal para ti. Cumplimos con todas las regulaciones de SUCAMEC.</p>
             <a href="#" class="btn btn-secondary">Agendar Cita</a>
+        </div>
+    </section>
+    <section class="map-section">
+        <h2 class="section-title">Encuéntranos</h2>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-77.02824068468172!3d-12.09210609145186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8c3b5b5b5b5%3A0x5b5b5b5b5b5b5b5b!2sAv.%20Javier%20Prado%20Este%201492%2C%20San%20Isidro%2015023%2C%20Per%C3%BA!5e0!3m2!1ses!2sus!4v1610000000000!5m2!1ses!2sus" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
         </div>
     </section>
 
