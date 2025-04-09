@@ -11,7 +11,6 @@ import '/src/styles.css';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
-
     <title>Armería Seguridad - Equipamiento y Asesoría Legal</title>
 </head>
 <body>
@@ -29,6 +28,12 @@ import '/src/styles.css';
             </nav>
         </div>
     </header>
+
+    <div id="demo-banner" class="demo-banner">
+        ⚠️ Esta página es solo una demostración. Si quiere más información, comunicarse al correo:
+        <a href="mailto:info@alosistemas.com">info@alosistemas.com</a>
+        <button class="close-btn" id="close-btn">✕</button>
+    </div>
 
     <div class="legal-banner" scroll-hidden>
         La compra de armas de fuego en Perú requiere permisos legales de la SUCAMEC. Ofrecemos asesoría en todo el proceso.
@@ -229,5 +234,16 @@ import '/src/styles.css';
             &copy; 2025 Armería Seguridad. Todos los derechos reservados. Empresa autorizada por SUCAMEC.
         </div>
     </footer>
+    <script type="module">
+        const banner = document.getElementById('demo-banner');
+        const closeBtn = document.getElementById('close-btn');
+      
+        closeBtn.addEventListener('click', () => {
+          banner.classList.add('hidden');
+          setTimeout(() => {
+            banner?.classList.remove('hidden');
+          }, 30000); // 30s
+        });
+      </script>
 </body>
 </html>
